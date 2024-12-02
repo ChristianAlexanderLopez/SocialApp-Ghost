@@ -23,7 +23,6 @@ export default function AuthPage({ onLogin }) {
   );
 }
 
-
 const styles = {
   authContainer: {
     display: "flex",
