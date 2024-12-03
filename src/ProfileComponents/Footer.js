@@ -28,7 +28,7 @@ const styles = {
     alignItems: "center", // Center align items vertically
     width: "100%", // Full width for the footer
     height: "60px",
-    position: "fixed", 
+    position: "fixed",
     bottom: 0, // Stick to the bottom of the container
   },
   footerContent: {

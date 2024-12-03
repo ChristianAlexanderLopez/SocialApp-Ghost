@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/*import React, { useState, useEffect } from "react";
 import avatar from "../Assets/avatar.png";
 import Parse from "parse";
 
@@ -78,8 +78,9 @@ function MainContent({ username, email, onUpdateUsername }) {
     <div style={styles.container}>
       <main style={styles.main}>
         <div style={styles.profileContainer}>
-          {/* Display the imported profile image */}
-          <img src={avatar} alt="Profile" style={styles.profileImage} />
+
+          {/* Display the imported profile image */} 
+    /*      <img src={avatar} alt="Profile" style={styles.profileImage} />
 
           <div style={styles.userInfo}>
             <h2 style={styles.userName}>{formData.fullName}</h2>
@@ -87,7 +88,7 @@ function MainContent({ username, email, onUpdateUsername }) {
           </div>
 
           {/* Edit button toggles edit mode */}
-          <button style={styles.editButton} onClick={toggleEditMode}>
+     /*     <button style={styles.editButton} onClick={toggleEditMode}>
             {isEditing ? "Save" : "Edit"}
           </button>
         </div>
@@ -151,6 +152,12 @@ function MainContent({ username, email, onUpdateUsername }) {
           </div>
         </div>
       </main>
+
+      <div style={styles.inputButtonContainer}>
+        <button style={styles.submitButton} onClick={handleSubmit}>
+          Submit Changes
+        </button>
+      </div>
     </div>
   );
 }
@@ -165,10 +172,9 @@ const styles = {
     position: "relative",
   },
   main: {
-    // main 元素的其他样式，如大小和颜色
-    width: "80%", // 示例宽度
-    maxWidth: "800px", // 示例最大宽度
-    backgroundColor: "#D1E8E4", // 示例背景色
+    width: "80%",
+    maxWidth: "800px",
+    backgroundColor: "#D1E8E4",
     padding: "20px",
     borderRadius: "8px",
     marginBottom: "20px",
@@ -211,7 +217,6 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "20px",
-    // marginBottom: "20px",
   },
   inputGroup: {
     display: "flex",
@@ -228,6 +233,24 @@ const styles = {
     border: "1px solid #ccc",
     fontSize: "16px",
   },
+  submitButtonContainer: {
+    position: "absolute", // Fix the button at the bottom
+    bottom: "20px", // 20px from the bottom of the screen
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+  },
+  submitButton: {
+    backgroundColor: "#007bff",
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    padding: "10px 20px",
+    cursor: "pointer",
+    fontSize: "16px",
+  },
 };
 
 export default MainContent;
+*/

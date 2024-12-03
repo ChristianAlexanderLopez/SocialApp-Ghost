@@ -18,12 +18,11 @@ export const Login = ({ onFormSwitch, onLogin, styles }) => {
 
     try {
       const user = await Parse.User.logIn(email, password);
-      alert("Login successful!");
       const username = user.get("username");
       const useremail = user.get("email");
 
       onLogin(username, useremail);
-      navigate("/home");
+      navigate("/profile");
     } catch (error) {
       setError("Login failed: " + error.message);
     }

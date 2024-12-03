@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { Login } from "./AuthComponent/Login";
 import { Register } from "./AuthComponent/Register";
+import { useNavigate } from "react-router-dom";
 
 export default function AuthPage({ onLogin }) {
   const [currentForm, setCurrentForm] = useState("login");
+  const navigate = useNavigate();
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
+  };
+
+  const handleLoginSuccess = (user, userEmail) => {
+    onLogin(user, userEmail);
+    navigate("/profile");
   };
 
   return (

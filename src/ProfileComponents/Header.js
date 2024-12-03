@@ -1,19 +1,14 @@
 import React from "react";
-import backIcon from "../Assets/arrow.png";
-import logout from "../Assets/logout.png"; 
+//import backIcon from "../Assets/arrow.png";
+import logout from "../Assets/logout.png";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <header style={styles.header}>
-      <div style={styles.backButtonContainer} onClick={()=> navigate("/home")}>
-        <img src={backIcon} alt="Back Icon" style={styles.icon} />{" "}
-        <button style={styles.backButton}>Back</button> 
-      </div>
-
-      <div style={styles.rightSection} onClick={() => navigate('/login')}>
+      <div style={styles.rightSection} onClick={() => navigate("/login")}>
         <img src={logout} alt="Logout Icon" style={styles.logoutIcon} />{" "}
         <button style={styles.logoutButton}>Log out</button>{" "}
       </div>
@@ -30,24 +25,6 @@ const styles = {
     backgroundColor: "#306C71",
     color: "#fff",
     height: "70px",
-  },
-  backButtonContainer: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px", // Space between the icon and the back text
-  },
-  icon: {
-    width: "16px", // Size of the back icon
-    height: "16px",
-    marginLeft: "150px",
-  },
-  backButton: {
-    background: "none",
-    border: "none",
-    color: "#fff",
-    cursor: "pointer",
-    fontSize: "16px",
-    // Left margin for spacing from the edge of the footer
   },
   rightSection: {
     display: "flex",

@@ -5,7 +5,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import AuthoPage from "./AuthPage";
+import AuthPage from "./AuthPage";
 import Profile from "./Profile";
 import Home from "./Home";
 
@@ -30,7 +30,11 @@ function App() {
         <Route
           path="/"
           element={
-            isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/login" />
+            isAuthenticated ? (
+              <Navigate to="/profile" />
+            ) : (
+              <Navigate to="/login" />
+            )
           }
         />
         <Route path="/login" element={<AuthPage onLogin={handleLogin} />} />
@@ -40,11 +44,15 @@ function App() {
         <Route
           path="/profile"
           element={
-            <Profile
-              username={username}
-              email={email}
-              onUpdateUsername={handleUpdateUsername}
-            />
+            isAuthenticated ? (
+              <Profile
+                username={username}
+                email={email}
+                onUpdateUsername={handleUpdateUsername}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
           }
         />
       </Routes>
